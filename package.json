@@ -3,11 +3,13 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "docker": "docker build -t logo-api .",
+    "docker:run": "docker run -p 3000:3000 logo-api"
   },
   "dependencies": {
-    "elysia": "latest",
-    "node-canvas": "^2.9.0"
+    "canvas": "^3.1.0",
+    "elysia": "latest"
   },
   "devDependencies": {
     "bun-types": "latest"
